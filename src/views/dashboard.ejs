@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title><%= title %></title>
+    <link rel="stylesheet" href="/assets/styles.css" />
+    <link rel="stylesheet" href="/assets/dashboard.css" />
+    <style></style>
+  </head>
+  <body>
+    <!-- sidebar here -->
+    <%- include('partials/sidebar') %>
+
+    <main class="main">
+      <div class="dashboard-container">
+        <div class="action-wrapper">
+          <h1 id="welcome-message">Welcome</h1>
+          <custom-button
+            id="create-order-btn"
+            text="Create order"
+          ></custom-button>
+        </div>
+        <p>Select your favorite product.</p>
+        <div id="product-container" class="product-container"></div>
+      </div>
+    </main>
+
+    <!-- Modal -->
+    <div id="orderModal" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>Create Order</h2>
+        <form id="orderForm" class="orderForm">
+          <label for="productName"
+            >Product Name
+            <span class="required">*</span>
+          </label>
+          <custom-input
+            type="text"
+            id="productName"
+            name="productName"
+          ></custom-input>
+
+          <label for="productPrice"
+            >Product Price
+            <span class="required">*</span>
+          </label>
+          <custom-input
+            type="number"
+            id="productPrice"
+            name="productPrice"
+          ></custom-input>
+
+          <label for="productDescription"
+            >Product Description
+            <span class="required">*</span>
+          </label>
+          <custom-input
+            type="text"
+            id="productDescription"
+            name="productDescription"
+            required
+          ></custom-input>
+          <label for="productImage"
+            >Product Image URL
+            <span class="required">*</span>
+          </label>
+          <custom-input
+            type="text"
+            id="productImage"
+            name="productImage"
+            required
+          ></custom-input>
+          <label for="productNumber"
+            >Product Number
+            <span class="required">*</span>
+          </label>
+          <custom-input
+            type="number"
+            id="productNumber"
+            name="productNumber"
+            required
+          ></custom-input>
+          <label for="uniqueId"
+            >Unique ID
+            <span class="required">*</span>
+          </label>
+          <custom-input
+            type="text"
+            id="uniqueId"
+            name="uniqueId"
+            required
+          ></custom-input>
+          <label for="color"
+            >Color
+            <span class="required">*</span>
+          </label>
+          <custom-input
+            type="text"
+            id="color"
+            name="color"
+            required
+          ></custom-input>
+          <label for="size"
+            >Size
+            <span class="required">*</span>
+          </label>
+          <custom-input
+            type="text"
+            id="size"
+            name="size"
+            required
+          ></custom-input>
+          <custom-button id="create" text="Create order"></custom-button>
+        </form>
+      </div>
+    </div>
+
+    <script type="module" src="../lib/dashboard.js"></script>
+  </body>
+</html>

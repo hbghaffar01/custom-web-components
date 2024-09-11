@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title><%= title %></title>
+    <link rel="stylesheet" href="/assets/styles.css" />
+    <link rel="stylesheet" href="/assets/dashboard.css" />
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.7.7/axios.min.js"
+      integrity="sha512-DdX/YwF5e41Ok+AI81HI8f5/5UsoxCVT9GKYZRIzpLxb8Twz4ZwPPX+jQMwMhNQ9b5+zDEefc+dcvQoPWGNZ3g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+  </head>
+  <body>
+    <main>
+      <section>
+        <div class="container">
+          <!-- Registration Form -->
+          <div class="register hidden">
+            <div class="wrapper">
+              <h1 class="heading">
+                Register
+                <br />
+                <span>By Haseeb Ghaffar</span>
+              </h1>
+              <custom-input
+                id="register-username"
+                type="text"
+                placeholder="username"
+              ></custom-input>
+              <custom-input
+                id="register-email"
+                type="email"
+                placeholder="email"
+              ></custom-input>
+              <custom-input
+                id="register-password"
+                type="password"
+                placeholder="password"
+              ></custom-input>
+              <div class="error-message" id="register-error"></div>
+              <custom-button
+                text="Register"
+                type="submit"
+                class="submitBtn"
+                block
+              ></custom-button>
+              <p>
+                Already have an account?
+                <a href="#login" id="show-login">Login here</a>
+              </p>
+            </div>
+          </div>
+
+          <!-- Login Form -->
+          <div class="login">
+            <div class="wrapper">
+              <h1 class="heading">Login</h1>
+              <custom-input
+                id="login-username"
+                type="text"
+                placeholder="Enter your username/email"
+              ></custom-input>
+              <custom-input
+                id="login-password"
+                type="password"
+                placeholder="password"
+              ></custom-input>
+              <div class="error-message" id="login-error"></div>
+              <custom-button text="Login" type="submit" block></custom-button>
+              <p>
+                Don't have an account?
+                <a href="#register" id="show-register">Register here</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <script type="module" src="../lib/main.js"></script>
+  </body>
+</html>

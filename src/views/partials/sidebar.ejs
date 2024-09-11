@@ -1,0 +1,83 @@
+<div class="hamburger-menu" id="hamburger-menu">
+  <div class="bar1"></div>
+  <div class="bar2"></div>
+  <div class="bar3"></div>
+</div>
+
+<aside class="sidebar" id="sidebar">
+  <button class="close-btn" id="close-btn">&times;</button>
+  <div class="logo">
+    <img src="https://www.teraleads.com/wp-content/uploads/2023/01/teraleads-logo-new.png" alt="logo">
+  </div>
+  <div class="btn_wrapper">
+    <custom-button
+      text="Products"
+      href="/dashboard"
+      color="#fff"
+      transparent
+    ></custom-button>
+    <custom-button
+      text="Cart"
+      href="/cart"
+      color="#fff"
+      transparent
+    ></custom-button>
+    <custom-button
+      text="Coupons"
+      color="#fff"
+      href="/coupons"
+      transparent
+    ></custom-button>
+    <custom-button
+      text="Feedback"
+      color="#fff"
+      href="/feedback"
+      transparent
+    ></custom-button>
+    <custom-button
+      text="Logout"
+      id="logout-btn"
+      color="#dc3545"
+    ></custom-button>
+  </div>
+</aside>
+
+<script>
+  function handleLogout() {
+    localStorage.removeItem("token");
+    localStorage.removeItem("user");
+    window.location.href = "/";
+  }
+
+  const logoutButton = document.getElementById("logout-btn");
+
+  if (logoutButton) {
+    logoutButton.removeEventListener("click", handleLogout);
+    logoutButton.addEventListener("click", function (e) {
+      console.log('called');
+      
+      e.preventDefault();
+      handleLogout();
+    });
+  } else {
+    console.error("Logout button not found.");
+  }
+
+  const hamburgerMenu = document.getElementById("hamburger-menu");
+  const sidebar = document.getElementById("sidebar");
+  const closeBtn = document.getElementById("close-btn");
+
+  if (hamburgerMenu && sidebar && closeBtn) {
+    hamburgerMenu.addEventListener("click", () => {
+      sidebar.classList.toggle("open");
+      hamburgerMenu.classList.toggle("active");
+    });
+
+    closeBtn.addEventListener("click", () => {
+      sidebar.classList.remove("open");
+      hamburgerMenu.classList.remove("active");
+    });
+  } else {
+    console.error("Sidebar elements not found");
+  }
+</script>
