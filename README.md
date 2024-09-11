@@ -1,7 +1,7 @@
 # Teralead Web Developer Project
 
 ## Note: 
-Please make sure to clone repo to test the project.
+Please make sure to clone repo to test the project, No .env required.
 
 This project is a full-stack web application built with a modular, maintainable, and reusable approach for both the frontend and backend. The application features authentication, product management, and a responsive user interface, designed to provide a seamless user experience.
 

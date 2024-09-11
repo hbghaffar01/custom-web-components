@@ -1,4 +1,4 @@
-const baseURL = "https://backend-teraleads.vercel.app";
+const baseURL = "https://teralead-backend.vercel.app";
 
 const getAuthToken = () => localStorage.getItem("token");
 
