@@ -1,9 +1,9 @@
-# Teralead Web Developer Project
+# Custom Web Components
 
 ## Note: 
 Please make sure to clone repo to test the project, No .env required.
 
-This project is a full-stack web application built with a modular, maintainable, and reusable approach for both the frontend and backend. The application features authentication, product management, and a responsive user interface, designed to provide a seamless user experience.
+This project is a web component based application built with a modular, maintainable, and reusable approach for both the frontend and backend. The application features authentication, product management, and a responsive user interface, designed to provide a seamless user experience.
 
 ## Table of Contents
 
@@ -19,7 +19,7 @@ This project is a full-stack web application built with a modular, maintainable,
 
 ## Project Overview
 
-The Teralead Web Developer Project is designed to demonstrate a clean and modular approach to building a full-stack application. The backend is implemented with Node.js and Express, featuring authentication, token management, and CRUD operations for products and user data. The frontend is built using vanilla JavaScript and web components, mimicking the reusable component structure found in frameworks like Vue and React.
+The Project is designed to demonstrate a clean and modular approach to building a full-stack application. The backend is implemented with Node.js and Express, featuring authentication, token management, and CRUD operations for products and user data. The frontend is built using vanilla JavaScript and web components, mimicking the reusable component structure found in frameworks like Vue and React.
 
 ## Features
 
@@ -51,7 +51,7 @@ To set up the project, follow these steps:
 
 1. **Clone the repository**:
     ```bash
-    git clone git@github.com:hbghaffar01/teralead-frontend.git
+    git clone git@github.com:hbghaffar01/custom-web-components.git
     ```
 
 2. **Install dependencies** for both frontend and backend:
@@ -84,8 +84,7 @@ To set up the project, follow these steps:
   - dotenv for environment variable management
 
 - **Frontend**:
-  - i had used vanilla js for this project and i had made web components for reuseability that make component like vue and react and  also reuability for keeping code dry and not repeating logic.
-  - carousel that display 2 dot on big screen and 4 on small.
+  - i had used vanilla js for this project.
   - Token handling is done and also when token is expired it automatically redirect user to to login page.
   - responsive design for side bar on small screens it show the sidebar with hamburger icon when clicked it display nav links.
   - EJS for server-side rendering
